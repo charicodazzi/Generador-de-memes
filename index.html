@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Generador de memes</h1>
+      <div>
+        <button class="button button-text"><i class="far fa-image"></i> Imagen</button>
+        <button><i class="fas fa-font"></i>Texto</div></button>
+        <button><i class="fas fa-lightbulb"></i>Modo Oscuro</button>
+    </div>
+    </header>
+
+    <main>
+      <div class="meme-container">
+        <p class="meme-text">TOP TEXT</p>
+        <div class="image"></div>
+        <p class="meme-text">BOTTOM TEXT</p>
+      </div>
+
+      <aside id="panelAside">
+        <section id="image">
+          <button><i class="fas fa-window-close"></i></button>
+          <h4>IMAGEN</h4>
+          <h3>URL</h3>
+          <input type="text" class="input-url">
+         <div class="panel-control">
+          <h3 class="panel-control-title">FONDO</h3>
+          <div class="panel-control-columns">
+          <div><input type="color" value="#FFFFFF"><span>#FFFFFF</span></div>
+          <div>
+            <select name="" id="">
+              <option value="unset">Ninguno</option>
+              <option value="lighten">Aclarar</option>
+              <option value="darken">Oscurecer</option>
+              <option value="difference">Diferencia</option>
+              <option value="luminosity">Luminosidad</option>
+              <option value="multiply">Multiplicar</option>
+            </select>
+          </div>
+        </div>
+         </div>
+
+        </section>
+        <section id="text">
+          <button><i class="fas fa-window-close"></i></button>
+          <h4>TEXTO</h4>
+          <form>
+            <label>SUPERIOR</label>
+            <textarea cols="10" rows="1" placeholder="TOP TEXT"></textarea>
+            <label>
+              <input type="checkbox" id="cbox1" value="first_checkbox" /> Sin
+              texto superior
+            </label>
+            <label>INFERIOR</label>
+            <textarea cols="10" rows="1" placeholder="BOTTOM TEXT"></textarea>
+            <label>
+              <input type="checkbox" id="cbox2" value="second_checkbox" /> Sin
+              texto superior
+            </label>
+          </form>
+        </section>
+      </aside>
+    </main>
+
+    <div id="downloadMeme">
+      <button>Descargar meme</button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
