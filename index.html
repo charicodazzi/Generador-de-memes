@@ -13,29 +13,30 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <header>
-      <h1>Generador de memes</h1>
-      <div>
-        <button class="button button-text"><i class="far fa-image"></i> Imagen</button>
-        <button><i class="fas fa-font"></i>Texto</div></button>
-        <button><i class="fas fa-lightbulb"></i>Modo Oscuro</button>
-    </div>
+  <body class="oscuro">
+    <header id="cajaheader">
+      <h1 class="title">Generador de memes</h1>
+      <div class="row" >
+        <button class="button" id="button-img"><i class="far fa-image"></i> Imagen</button>
+        <button class="button" id="button-text"><i class="fas fa-font"></i>Texto</button>
+        <button class="button" id="claroOscuro"><i class="fas fa-lightbulb"></i>Modo Oscuro</button>
+      </div>
     </header>
 
-    <main>
+    <main id="panel-inicial">
       <div class="meme-container">
-        <p class="meme-text">TOP TEXT</p>
-        <div class="image"></div>
-        <p class="meme-text">BOTTOM TEXT</p>
+        <p class="memeTextTop memeText center ">TOP TEXT</p>
+        <div class="meme-image" ></div>
+        <p class="memeTextBottom memeText center">BOTTOM TEXT</p>
       </div>
 
-      <aside id="panelAside">
-        <section id="image">
-          <button><i class="fas fa-window-close"></i></button>
+      <aside class="aside-position"id="panelAside">
+        <button class="cerrar"id="button-close">
+          <i class="fas fa-window-close" ></i></button>
+        <section id="panel-image">
           <h4>IMAGEN</h4>
           <h3>URL</h3>
-          <input type="text" class="input-url">
+          <input type="text" class="input-url" >
          <div class="panel-control">
           <h3 class="panel-control-title">FONDO</h3>
           <div class="panel-control-columns">
@@ -53,28 +54,92 @@
         </div>
          </div>
 
+         <div class="panel-filtros">
+           <h3>FILTROS</h3>
+           <div><label for="">BRILLO</label><input type="range"></div>
+           <div><label for="">OPACIDAD</label><input type="range"></div>
+           <div><label for="">CONTRASTE</label><input type="range"></div>
+           <div><label for="">DESENFOQUE</label><input type="range"></div>
+           <div><label for="">ESCALA DE GRISES</label><input type="range"></div>
+           <div><label for="">SEPIA</label><input type="range"></div>
+           <div><label for="">HUE</label><input type="range"></div>
+           <div><label for="">SATURADO</label><input type="range"></div>
+           <div><label for="">NEGATIVO</label><input type="range"></div>
+          </div>
+          <button>Restablecer filtros</button>
+
         </section>
-        <section id="text">
-          <button><i class="fas fa-window-close"></i></button>
+        <section id="panel-text">
           <h4>TEXTO</h4>
-          <form>
-            <label>SUPERIOR</label>
-            <textarea cols="10" rows="1" placeholder="TOP TEXT"></textarea>
-            <label>
-              <input type="checkbox" id="cbox1" value="first_checkbox" /> Sin
-              texto superior
-            </label>
-            <label>INFERIOR</label>
-            <textarea cols="10" rows="1" placeholder="BOTTOM TEXT"></textarea>
-            <label>
-              <input type="checkbox" id="cbox2" value="second_checkbox" /> Sin
-              texto superior
-            </label>
-          </form>
+        <div>
+            <h3>SUPERIOR</h3>
+            <textarea name="superior" id="topText" cols="20" rows="2" placeholder="TOP TEXT"></textarea>
+            <input type="checkbox">
+            <label for="">Sin texto superior</label>
+          </div>
+          <div>
+            <h3>INFERIOR</h3>
+            <textarea name="interior" id="bottomText" cols="20" rows="2" placeholder="BOTTOM TEXT"></textarea>
+            <input type="checkbox">
+            <label for="">Sin texto inferior</label>
+          </div>
+          <div>
+            <h3>FUENTE</h3>
+            <select name="" id="">
+            <option value="Arial">Arial</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="American typewriter">American typewriter</option>
+            <option value="Andale Mono">Andale Mono</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Impact">Impact</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+          </select>
+          <div class="flex-container">
+            <input type="number" min="12" value="40" max="50">
+            <div class="buttons-container">
+              <button><i class="fas fa-align-left"></i></button>
+              <button><i class="fas fa-align-center"></i></button>
+              <button> <i class="fas fa-align-right"></i></button>
+            </div>
+          </div>
+          <div class="panel-control">
+            <div class="panel-control-column">
+              <h3>COLOR</h3><input type="color" value="#000000">
+            </div>
+            <div class="panel-control-column">
+              <h3>FONDO</h3><input type="color" value="#FFFFFF">
+            </div>
+            <input type="checkbox" id="fondoTransparente">
+            <label for="fondoTransparente">Fondo transparente</label>
+          </div>
+          <div class="panel-control">
+            <h3>CONTORNO</h3>
+            <div class="buttons-container">
+            <button>Ninguno</button>
+            <button>Claro</button>
+            <button>Oscuro</button>
+          </div>
+          <div>
+            <h3>Espaciado</h3>
+            <input type="number">
+          </div>
+          <div>
+            <h3>Interlineado</h3>
+           <select name="" id="">
+          <option value="0.8">0.8</option>
+           <option value="1">1</option>
+           <option value="1.2">1.2</option>
+           <option value="1.5">1.5</option>
+           <option value="2">2</option>
+           <option value="2.5">2.5</option></select>
+          </div>
+        </div>
         </section>
       </aside>
     </main>
-
+ 
     <div id="downloadMeme">
       <button>Descargar meme</button>
     </div>
