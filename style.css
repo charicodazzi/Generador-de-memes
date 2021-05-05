@@ -54,7 +54,7 @@ header {
   color: var(--color);
 }
 
-/* botones header*/
+/* botones header */
 
 .button {
   height: 36px;
@@ -75,31 +75,36 @@ header {
   display: none;
 }
 
+main {
+  background-color: var(--fondoMain);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+}
+
 /* Meme panel inicial */
-.meme-image {
+#meme-image {
   margin: auto;
-  width: 600px;
+  width: 100%;
   height: 400px;
   background-color: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .meme-container {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  width: 600px;
 }
 
 .meme-text {
-  height: 50px;
   background-color: white;
-  width: 600px;
+  width: 100%;
   margin: auto;
   padding: 20px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 /*boton CRUZ*/
@@ -124,10 +129,4 @@ header {
   height: 100%;
   padding: 40px 10px 010px;
   background-color: var(--colorPanel);
-}
-
-/* color MAIN*/
-main {
-  background-color: var(--fondoMain);
-  color: var(--color);
 }

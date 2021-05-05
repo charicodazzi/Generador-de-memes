@@ -25,9 +25,9 @@
 
     <main id="panel-inicial">
       <div class="meme-container">
-        <p class="memeTextTop memeText center ">TOP TEXT</p>
-        <div class="meme-image" ></div>
-        <p class="memeTextBottom memeText center">BOTTOM TEXT</p>
+        <p class="meme-text" id="memeTextTop">TOP TEXT</p>
+        <div id="meme-image"></div>
+        <p class="meme-text" id="memetextBottom"> BOTTOM TEXT</p>
       </div>
 
       <aside class="aside-position"id="panelAside">
@@ -36,13 +36,13 @@
         <section id="panel-image">
           <h4>IMAGEN</h4>
           <h3>URL</h3>
-          <input type="text" class="input-url" >
-         <div class="panel-control">
-          <h3 class="panel-control-title">FONDO</h3>
-          <div class="panel-control-columns">
-          <div><input type="color" value="#FFFFFF"><span>#FFFFFF</span></div>
+          <input type="text" id="input-url" >
+         <div>
+          <h3>FONDO</h3>
           <div>
-            <select name="" id="">
+          <div><input type="color" value="#FFFFFF" id="colorFondoImagen"><span id="spanColorFondo">#FFFFFF</span></div>
+          <div>
+            <select name="TipoDeFondo" id="TipoDeFondo">
               <option value="unset">Ninguno</option>
               <option value="lighten">Aclarar</option>
               <option value="darken">Oscurecer</option>
@@ -74,18 +74,18 @@
         <div>
             <h3>SUPERIOR</h3>
             <textarea name="superior" id="topText" cols="20" rows="2" placeholder="TOP TEXT"></textarea>
-            <input type="checkbox">
+            <input type="checkbox" id="checkboxarriba">
             <label for="">Sin texto superior</label>
           </div>
           <div>
             <h3>INFERIOR</h3>
             <textarea name="interior" id="bottomText" cols="20" rows="2" placeholder="BOTTOM TEXT"></textarea>
-            <input type="checkbox">
-            <label for="">Sin texto inferior</label>
+            <input type="checkbox" id="checkboxabajo">
+            <label for="checkboxabajo">Sin texto inferior</label>
           </div>
           <div>
             <h3>FUENTE</h3>
-            <select name="" id="">
+            <select name="" id="selectTipografias">
             <option value="Arial">Arial</option>
             <option value="Arial Black">Arial Black</option>
             <option value="American typewriter">American typewriter</option>
@@ -97,19 +97,19 @@
             <option value="Times New Roman">Times New Roman</option>
           </select>
           <div class="flex-container">
-            <input type="number" min="12" value="40" max="50">
+            <input type="number" min="12" value="40" max="50" id="fontSize">
             <div class="buttons-container">
-              <button><i class="fas fa-align-left"></i></button>
-              <button><i class="fas fa-align-center"></i></button>
-              <button> <i class="fas fa-align-right"></i></button>
+              <button class="left"><i class="fas fa-align-left"></i></button>
+              <button class="center"><i class="fas fa-align-center"></i></button>
+              <button class="right"> <i class="fas fa-align-right"></i></button>
             </div>
           </div>
           <div class="panel-control">
             <div class="panel-control-column">
-              <h3>COLOR</h3><input type="color" value="#000000">
+              <h3>COLOR</h3><input id="inputColor" type="color" value="#000000">
             </div>
             <div class="panel-control-column">
-              <h3>FONDO</h3><input type="color" value="#FFFFFF">
+              <h3>FONDO</h3><input id="colorFondoTexto" type="color" value="#FFFFFF">
             </div>
             <input type="checkbox" id="fondoTransparente">
             <label for="fondoTransparente">Fondo transparente</label>
@@ -117,17 +117,17 @@
           <div class="panel-control">
             <h3>CONTORNO</h3>
             <div class="buttons-container">
-            <button>Ninguno</button>
-            <button>Claro</button>
-            <button>Oscuro</button>
+            <button id="sinContorno">Ninguno</button>
+            <button id="contornoClaro">Claro</button>
+            <button id="contornoOscuro">Oscuro</button>
           </div>
           <div>
             <h3>Espaciado</h3>
-            <input type="number">
+            <input type="number" min=0 max=80 id="espaciado">
           </div>
           <div>
             <h3>Interlineado</h3>
-           <select name="" id="">
+           <select name="" id="interlineado">
           <option value="0.8">0.8</option>
            <option value="1">1</option>
            <option value="1.2">1.2</option>
