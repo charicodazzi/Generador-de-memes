@@ -14,7 +14,7 @@
     />
   </head>
   <body class="oscuro">
-    <header id="cajaheader">
+    <header>
       <h1 class="title">Generador de memes</h1>
       <div class="row" >
         <button class="button" id="button-img"><i class="far fa-image"></i> Imagen</button>
@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <main id="panel-inicial">
+    <main>
       <div class="meme-container">
         <p class="meme-text" id="memeTextTop">TOP TEXT</p>
         <div id="meme-image"></div>
@@ -54,19 +54,28 @@
         </div>
          </div>
 
-         <div class="panel-filtros">
+         <div>
            <h3>FILTROS</h3>
-           <div><label for="">BRILLO</label><input type="range"></div>
-           <div><label for="">OPACIDAD</label><input type="range"></div>
-           <div><label for="">CONTRASTE</label><input type="range"></div>
-           <div><label for="">DESENFOQUE</label><input type="range"></div>
-           <div><label for="">ESCALA DE GRISES</label><input type="range"></div>
-           <div><label for="">SEPIA</label><input type="range"></div>
-           <div><label for="">HUE</label><input type="range"></div>
-           <div><label for="">SATURADO</label><input type="range"></div>
-           <div><label for="">NEGATIVO</label><input type="range"></div>
+           <div><label for="">BRILLO</label>
+            <input type="range" id="brillo" value="0.5" min="0" max="1" step="0.1"></div>
+           <div><label for="">OPACIDAD</label>
+            <input type="range" id="opacidad"value="0.5" min="0" max="1" step="0.1"></div>
+           <div><label for="">CONTRASTE</label>
+            <input type="range" id="contraste"value="100" min="100" max="1000"></div>
+           <div><label for="">DESENFOQUE</label>
+            <input type="range" id="desenfoque"value="0" min="0" max="10" step="0.1"></div>
+           <div><label for="">ESCALA DE GRISES</label>
+            <input type="range" id="grises" value="0"min="0" max="100"></div>
+           <div><label for="">SEPIA</label>
+            <input type="range" id="sepia" value="0"min="0" max="100"></div>
+           <div><label for="">HUE</label>
+            <input type="range" id="hue" value="0"min="0" max="360"></div>
+           <div><label for="">SATURADO</label>
+            <input type="range" id="saturado" value="100"min="100" max="1000" step="10"></div>
+           <div><label for="">NEGATIVO</label>
+            <input type="range"id="negativo" value="0"min="0" max="1" step="0.1"></div>
           </div>
-          <button>Restablecer filtros</button>
+          <button id="resetButton">Restablecer filtros</button>
 
         </section>
         <section id="panel-text">
@@ -127,7 +136,7 @@
           </div>
           <div>
             <h3>Interlineado</h3>
-           <select name="" id="interlineado">
+           <select name="interlineado" id="interlineado">
           <option value="0.8">0.8</option>
            <option value="1">1</option>
            <option value="1.2">1.2</option>
@@ -140,7 +149,7 @@
       </aside>
     </main>
  
-    <div id="downloadMeme">
+    <div>
       <button>Descargar meme</button>
     </div>
   </body>

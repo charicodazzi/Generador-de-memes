@@ -210,7 +210,6 @@ tipoDeFondo.addEventListener("input", () => {
   imagenmeme.style.backgroundBlendMode = tipoDeFondo.value;
 });
 
-/*
 //FILTROS DE IMAGEN
 const brillo = document.getElementById("brillo");
 const opacidad = document.getElementById("opacidad");
@@ -222,76 +221,39 @@ const hue = document.getElementById("hue");
 const saturado = document.getElementById("saturado");
 const negativo = document.getElementById("negativo");
 
-const addFiltros = () =>{
-    imgMeme.style.filter = `brightness(${brillo.value}) 
+const addFilters = () => {
+  imagenmeme.style.filter = `brightness(${brillo.value}) 
     opacity(${opacidad.value}) contrast(${contraste.value}%) 
     blur(${desenfoque.value}px) grayscale(${grises.value}%) 
     sepia(${sepia.value}%) hue-rotate(${hue.value}deg) 
     saturate(${saturado.value}%) invert(${negativo.value})`;
 };
 
-brillo.addEventListener("change", addFiltros);
-opacidad.addEventListener("change", addFiltros);
-contraste.addEventListener("change", addFiltros);
-desenfoque.addEventListener("change", addFiltros);
-grises.addEventListener("change", addFiltros);
-sepia.addEventListener("change", addFiltros);
-hue.addEventListener("change", addFiltros);
-saturado.addEventListener("change", addFiltros);
-negativo.addEventListener("change", addFiltros);
+brillo.addEventListener("change", addFilters);
+opacidad.addEventListener("change", addFilters);
+contraste.addEventListener("change", addFilters);
+desenfoque.addEventListener("change", addFilters);
+grises.addEventListener("change", addFilters);
+sepia.addEventListener("change", addFilters);
+hue.addEventListener("change", addFilters);
+saturado.addEventListener("change", addFilters);
+negativo.addEventListener("change", addFilters);
 
 //REESTABLECER FILTROS
-const botonReestablecer = document.getElementById("btn-reestablecer");
-const resetFiltros = () =>{
-    brillo.value = 1; opacidad.value = 1; contraste.value = 100;
-    desenfoque.value = 0; grises.value = 0; sepia.value = 0;
-    hue.value = 0; saturado.value = 100; negativo.value = 0;
+const resetButton = document.getElementById("resetButton");
+const resetFiltros = () => {
+  brillo.value = 1;
+  opacidad.value = 1;
+  contraste.value = 100;
+  desenfoque.value = 0;
+  grises.value = 0;
+  sepia.value = 0;
+  hue.value = 0;
+  saturado.value = 100;
+  negativo.value = 0;
 };
 
-botonReestablecer.addEventListener("click", () =>{
-    imgMeme.style.filter = "none";
-    resetFiltros();
+resetButton.addEventListener("click", () => {
+  resetFiltros();
+  addFilters();
 });
-<div class="filtros-img column">
-            <h3>FILTROS</h3>
-            <div class="column">
-              <label for="brillo">BRILLO</label>
-              <input type="range" name="brillo" id="brillo" min="0" max="1" value="1" step="0.1" />
-            </div>
-            <div class="column">
-              <label for="opacidad">OPACIDAD</label>
-              <input type="range" name="opacidad" id="opacidad" min="0" max="1" value="1" step="0.1" />
-            </div>
-            <div class="column">
-              <label for="contraste">CONTRASTE</label>
-              <input type="range" name="contraste" id="contraste" min="100" max="1000" value="100" />
-            </div>
-            <div class="column">
-              <label for="desenfoque">DESENFOQUE</label>
-              <input type="range" name="desenfoque" id="desenfoque" min="0" max="10" value="0" step="0.1" />
-            </div>
-            <div class="column">
-              <label for="escala">ESCALA DE GRISES</label>
-              <input type="range" name="escala" id="grises" min="0" max="100" value="0" />
-            </div>
-            <div class="column">
-              <label for="sepia">SEPIA</label>
-              <input type="range" name="sepia" id="sepia" min="0" max="100" value="0" />
-            </div>
-            <div class="column">
-              <label for="hue">HUE</label>
-              <input type="range" name="hue" id="hue" min="0" max="360" value="0" />
-            </div>
-            <div class="column">
-              <label for="saturado">SATURADO</label>
-              <input type="range" name="saturado" id="saturado" min="100" max="1000" value="100" step="10" />
-            </div>
-            <div class="column">
-              <label for="negativo">NEGATIVO</label>
-              <input type="range" name="negativo" id="negativo" min="0" max="1" value="0" step="0.1" />
-            </div>
-          </div>
-         
-          <button id="btn-reestablecer">Reestablecer filtros</button>
-         
-        </section>*/
