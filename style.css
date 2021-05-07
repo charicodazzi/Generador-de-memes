@@ -6,24 +6,25 @@
 
 /*MODO OSCURO*/
 body.oscuro {
-  --color: rgb(29, 161, 242);
+  --color: rgb(251, 251, 251);
   --fondoMain: rgb(21, 32, 43);
-  --colorHeader: rgb(16, 14, 49);
-  --colorPanel: rgb(13, 7, 63);
+  --colorHeader: rgb(46, 63, 75);
+  --colorPanel: rgb(31, 46, 57);
 }
 
 /*MODO CLARO*/
 body.modoClaro {
   --color: rgb(21, 32, 43);
-  --fondoMain: rgb(44, 105, 170);
+  --fondoMain: rgb(160, 187, 214);
   --colorHeader: rgb(148, 176, 218);
-  --colorPanel: rgb(89, 106, 133);
+  --colorPanel: rgb(120, 137, 163);
 }
 
 /*color BODY*/
 body {
   background-color: var(--fondoMain);
   color: var(--color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .row {
@@ -100,7 +101,8 @@ main {
 }
 
 .meme-text {
-  background-color: white;
+  color: var(--color);
+  background-color: var(--colorPanel);
   width: 100%;
   margin: auto;
   padding: 20px;
@@ -131,24 +133,40 @@ main {
   background-color: var(--colorPanel);
 }
 
-/* estilo barras de filtros
-//estilo barra
-input[type=range]{  
-    margin-top: 5px;   
-    width: 100%;
-    background-color: rgb(90, 93, 104);
-    border-radius: 10px;
-    appearance: none;
-    height: 6px;    
+/*estilo barra*/
+input[type="range"] {
+  margin-top: 5px;
+  width: 100%;
+  background-color: rgb(229, 231, 241);
+  border-radius: 10px;
+  appearance: none;
+  height: 6px;
 }
 
-//estilo bolita
-input[type=range]::-webkit-slider-thumb {
+/*estilo bolita*/
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(99, 97, 107);
   height: 16px;
   width: 16px;
   border-radius: 25px;
-  background: rgb(255, 255, 255);
+  background: rgb(99, 97, 107);
   cursor: pointer;
-}*/
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px (0, 0, 0, 0.1);
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}

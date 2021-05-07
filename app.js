@@ -125,16 +125,20 @@ alignRight.addEventListener("click", () => {
 
 // COLOR DE LETRA
 const colorLetra = document.getElementById("inputColor");
+const colorLetraSpan = document.getElementById("colorLetraPanelTexto");
 colorLetra.addEventListener("input", () => {
   topTitleMeme.style.color = colorLetra.value;
   bottomTitleMeme.style.color = colorLetra.value;
+  colorLetraSpan.textContent = colorLetra.value;
 });
 
 // CAMBIAR FONDO
 const colorFondoTexto = document.querySelector("#colorFondoTexto");
+const colorFondoSpan = document.getElementById("colorFondoPanelTexto");
 colorFondoTexto.addEventListener("input", () => {
   topTitleMeme.style.backgroundColor = colorFondoTexto.value;
   bottomTitleMeme.style.backgroundColor = colorFondoTexto.value;
+  colorFondoSpan.textContent = colorFondoTexto.value;
 });
 
 // FONDO TRANSPARENTE
