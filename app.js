@@ -189,6 +189,7 @@ espaciado.addEventListener("input", () => {
 const interlineado = document.querySelector("#interlineado");
 interlineado.addEventListener("input", () => {
   topTitleMeme.style.lineHeight = interlineado.value;
+  bottomTitleMeme.style.lineheight = interlineado.value;
 });
 
 //---------FIN PANEL TEXTO-------//
@@ -260,4 +261,14 @@ const resetFiltros = () => {
 resetButton.addEventListener("click", () => {
   resetFiltros();
   addFilters();
+});
+//Boton descarga
+
+const botonDescargar = document.querySelector("#btn-download");
+const imgContainer = document.querySelector("#meme-container");
+
+botonDescargar.addEventListener("click", () => {
+  domtoimage.toBlob(imgContainer).then(function (blob) {
+    window.saveAs(blob, "meme.png");
+  });
 });
