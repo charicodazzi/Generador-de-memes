@@ -87,18 +87,20 @@
         </section>
         <section id="panel-text">
           <h4>TEXTO</h4>
-        <div>
+          <div class="col">
             <h3>SUPERIOR</h3>
             <textarea name="superior" id="topText" cols="20" rows="2" placeholder="TOP TEXT"></textarea>
             <input type="checkbox" id="checkboxarriba">
             <label for="">Sin texto superior</label>
           </div>
-          <div>
+
+          <div class="col">
             <h3>INFERIOR</h3>
             <textarea name="interior" id="bottomText" cols="20" rows="2" placeholder="BOTTOM TEXT"></textarea>
             <input type="checkbox" id="checkboxabajo">
             <label for="checkboxabajo">Sin texto inferior</label>
           </div>
+        
           <div>
             <h3>FUENTE</h3>
             <select name="" id="selectTipografias">
@@ -112,7 +114,7 @@
             <option value="Verdana">Verdana</option>
             <option value="Times New Roman">Times New Roman</option>
           </select>
-          <div class="flex-container">
+          <div class="flex-row">
             <input type="number" min="12" value="40" max="50" id="fontSize">
             <div class="buttons-container">
               <button class="left"><i class="fas fa-align-left"></i></button>
@@ -121,12 +123,14 @@
             </div>
           </div>
           <div class="panel-control">
+            <div class="flex-row">
             <div class="panel-control-column">
               <h3>COLOR</h3><input id="inputColor" type="color" value="#000000"><span id="colorLetraPanelTexto"> #000000</span>
             </div>
             <div class="panel-control-column">
               <h3>FONDO</h3><input id="colorFondoTexto" type="color" value="#FFFFFF"><span id="colorFondoPanelTexto"> #FFFFFF</span>
             </div>
+          </div>
             <input type="checkbox" id="fondoTransparente">
             <label for="fondoTransparente">Fondo transparente</label>
           </div>
@@ -154,9 +158,6 @@
         </div>
         </section>
       </aside>
-
- 
-   
-  </body>
+</body>
   <script src="app.js"></script>
 </html>

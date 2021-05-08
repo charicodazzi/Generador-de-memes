@@ -29,9 +29,11 @@ body {
 
 .row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-bottom: 5px;
+}
+.flex-row {
+  display: flex;
 }
 
 .col {
@@ -98,8 +100,8 @@ main {
 #meme-container {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  height: 400px;
+  width: 37.5em;
+  height: 25em;
 }
 
 .meme-text {
