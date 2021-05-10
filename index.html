@@ -42,16 +42,16 @@
           <i class="fas fa-window-close" ></i></button>
         <section id="panel-image">
           <h4>IMAGEN</h4>
-          <h3>URL</h3>
+          <h3 class="margintop5">URL</h3>
           <input type="text" id="input-url" class="width100">
          <div>
-          <h3>FONDO</h3>
-          <div class="flex-row">
-            <div>
+          <h3 class="margintop5">FONDO</h3>
+          <div class="flex-row margintop5" id="contendorInputFondo">
+            <div class="contenedorInput">
             <input type="color" value="#FFFFFF" id="colorFondoImagen">
               <span id="spanColorFondo"> #FFFFFF</span>
             </div>
-          <div >
+          <div class="optionsFondo">
             <select name="TipoDeFondo" id="TipoDeFondo" >
               <option value="unset">Ninguno</option>
               <option value="lighten">Aclarar</option>
@@ -64,25 +64,25 @@
         </div>
          </div>
 
-         <div>
+         <div class="margintop5">
            <h3>FILTROS</h3>
-           <div><label for="">BRILLO</label>
+           <div class="margintop5"><label for="">BRILLO</label>
             <input type="range" id="brillo" value="0.5" min="0" max="1" step="0.1"></div>
-           <div><label for="">OPACIDAD</label>
+           <div class="margintop5"><label for="">OPACIDAD</label>
             <input type="range" id="opacidad"value="0.5" min="0" max="1" step="0.1"></div>
-           <div><label for="">CONTRASTE</label>
+           <div class="margintop5"><label for="">CONTRASTE</label>
             <input type="range" id="contraste"value="100" min="100" max="1000"></div>
-           <div><label for="">DESENFOQUE</label>
+           <div class="margintop5"><label for="">DESENFOQUE</label>
             <input type="range" id="desenfoque"value="0" min="0" max="10" step="0.1"></div>
-           <div><label for="">ESCALA DE GRISES</label>
+           <div class="margintop5"><label for="">ESCALA DE GRISES</label>
             <input type="range" id="grises" value="0"min="0" max="100"></div>
-           <div><label for="">SEPIA</label>
+           <div class="margintop5"><label for="">SEPIA</label>
             <input type="range" id="sepia" value="0"min="0" max="100"></div>
-           <div><label for="">HUE</label>
+           <div class="margintop5"><label for="">HUE</label>
             <input type="range" id="hue" value="0"min="0" max="360"></div>
-           <div><label for="">SATURADO</label>
+           <div class="margintop5"><label for="">SATURADO</label>
             <input type="range" id="saturado" value="100"min="100" max="1000" step="10"></div>
-           <div><label for="">NEGATIVO</label>
+           <div class="margintop5"><label for="">NEGATIVO</label>
             <input type="range"id="negativo" value="0"min="0" max="1" step="0.1"></div>
           </div>
           <button id="resetButton">Restablecer filtros</button>

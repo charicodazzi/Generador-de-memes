@@ -40,6 +40,18 @@ body {
   display: flex;
 }
 
+#contendorInputFondo {
+  justify-content: space-between;
+}
+
+.contendorInput {
+  width: 48%;
+}
+
+.optionsFondo {
+  width: 48%;
+}
+
 /*----BOTONES----*/
 
 .button {
@@ -176,12 +188,15 @@ main {
   background-color: var(--colorPanel);
 }
 
-/* clases INPUTS */
+/* clases reutilizables INPUTS */
 .width100 {
   width: 100%;
 }
 .width50 {
   width: 50%;
+}
+.margintop5 {
+  margin-top: 5px;
 }
 
 /*estilo barra*/
