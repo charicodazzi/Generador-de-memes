@@ -41,6 +41,25 @@ body {
   flex-direction: column;
 }
 
+.button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 3px;
+  outline: 0;
+  color: var(--color);
+}
+
+.button:hover {
+  background-color: white;
+  transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  outline: 0;
+}
+
 /*Inicio HEADER*/
 
 .title {
@@ -52,7 +71,7 @@ body {
 }
 
 header {
-  padding: 20px;
+  padding: 10px;
   background-color: var(--colorHeader);
   color: var(--color);
 }
@@ -174,3 +193,34 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
   border: none;
 }
+/*
+@media only screen and (min-width: 768px) {
+ 
+
+  #panel-image {
+    width: 260px;
+    height: 100%;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding: 30px 15px;
+    overflow: auto;
+    z-index: 10;
+  }
+  textarea {
+    width: 25%;
+  }
+  #panel-text {
+    width: 260px;
+    height: 100%;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding: 30px 15px;
+    overflow: auto;
+    z-index: 10;
+  }
+}
+*/
