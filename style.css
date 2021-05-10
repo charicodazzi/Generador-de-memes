@@ -32,13 +32,12 @@ body {
   justify-content: center;
   margin-bottom: 5px;
 }
-.flex-row {
-  display: flex;
-}
-
 .col {
   display: flex;
   flex-direction: column;
+}
+.flex-row {
+  display: flex;
 }
 
 /*----BOTONES----*/
@@ -69,6 +68,26 @@ body {
   border: none;
   border-radius: 4px;
   margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(68, 177, 86, 0.3);
+  cursor: pointer;
+}
+#resetButton {
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(185, 167, 167, 0.3);
+  margin-top: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+/*boton CRUZ*/
+
+.cerrar {
+  position: fixed;
+  top: 15px;
+  right: 40px;
+  z-index: 1;
+  border: 0;
+  font-size: 24px;
 }
 
 /*Inicio HEADER*/
@@ -82,7 +101,6 @@ body {
 }
 
 header {
-  width: 100%;
   padding: 10px;
   background-color: var(--colorHeader);
   color: var(--color);
@@ -115,6 +133,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 /* Meme panel inicial */
@@ -144,17 +163,6 @@ main {
   text-align: center;
 }
 
-/*boton CRUZ*/
-
-.cerrar {
-  position: fixed;
-  top: 15px;
-  right: 40px;
-  z-index: 1;
-  border: 0;
-  font-size: 24px;
-}
-
 /* ASIDE */
 
 .aside-position {
@@ -166,6 +174,14 @@ main {
   height: 100%;
   padding: 40px 10px 010px;
   background-color: var(--colorPanel);
+}
+
+/* clases INPUTS */
+.width100 {
+  width: 100%;
+}
+.width50 {
+  width: 50%;
 }
 
 /*estilo barra*/

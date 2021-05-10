@@ -17,7 +17,7 @@
 
   </head>
   <body class="oscuro">
-    <header>
+    <header class="width100">
       <h1 class="title">Generador de memes</h1>
       <div class="row" >
         <button class="button" id="button-img"><i class="far fa-image"></i> Imagen</button>
@@ -43,13 +43,16 @@
         <section id="panel-image">
           <h4>IMAGEN</h4>
           <h3>URL</h3>
-          <input type="text" id="input-url" >
+          <input type="text" id="input-url" class="width100">
          <div>
           <h3>FONDO</h3>
           <div class="flex-row">
-          <div><input type="color" value="#FFFFFF" id="colorFondoImagen"><span id="spanColorFondo"> #FFFFFF</span></div>
-          <div>
-            <select name="TipoDeFondo" id="TipoDeFondo">
+            <div>
+            <input type="color" value="#FFFFFF" id="colorFondoImagen">
+              <span id="spanColorFondo"> #FFFFFF</span>
+            </div>
+          <div >
+            <select name="TipoDeFondo" id="TipoDeFondo" >
               <option value="unset">Ninguno</option>
               <option value="lighten">Aclarar</option>
               <option value="darken">Oscurecer</option>
