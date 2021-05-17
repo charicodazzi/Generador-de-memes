@@ -10,14 +10,16 @@ body.oscuro {
   --fondoMain: rgb(21, 32, 43);
   --colorHeader: rgb(46, 63, 75);
   --colorPanel: rgb(31, 46, 57);
+  --colorInputHover: rgb(72, 87, 98);
 }
 
 /*MODO CLARO*/
 body.modoClaro {
   --color: rgb(21, 32, 43);
   --fondoMain: rgb(160, 187, 214);
-  --colorHeader: rgb(148, 176, 218);
-  --colorPanel: rgb(120, 137, 163);
+  --colorHeader: rgb(175, 198, 231);
+  --colorPanel: rgb(154, 169, 192);
+  --colorInputHover: rgb(208, 225, 236);
 }
 
 /*color BODY*/
@@ -42,16 +44,146 @@ body {
 
 #contendorInputFondo {
   justify-content: space-between;
+  width: 100%;
 }
 
-.contendorInput {
+.fondoInputs {
+  background-color: var(--colorHeader);
+  border: 0;
+  border-radius: 0.16em;
+  color: var(--color);
+}
+
+.fondoInputs:hover {
+  background-color: var(--colorInputHover);
+}
+
+.contenedorInput:hover {
+  background-color: var(--colorInputHover);
+}
+
+.contenedorInput {
+  display: flex;
+  align-content: center;
+  border: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--colorHeader);
   width: 48%;
+  padding: 4px;
+}
+#spanColorFondo {
+  display: flex;
+  font-size: 14px;
+  margin-inline-start: 10px;
+  text-align: center;
+  margin-top: 0.1em;
 }
 
 .optionsFondo {
   width: 48%;
 }
 
+#tipoDeFondo {
+  width: 100%;
+  border: 0;
+  border-radius: 25px;
+  padding: 4px;
+  color: var(--color);
+}
+
+#input-url {
+  border: 0;
+  border-radius: 25px;
+  padding: 4px;
+}
+
+#espaciado {
+  width: 100%;
+}
+#interlineado {
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttons-container-alineacion {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+.btn-alineacion-tamaño {
+  font-size: 20px;
+
+  width: 30%;
+}
+#fontSize {
+  width: 48%;
+}
+
+.fontsize-alineacion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contornoBoton {
+  width: 30%;
+}
+
+.estiloInputs {
+  border: 0;
+  border-radius: 25px;
+  padding: 4px;
+}
+
+.textarea {
+  width: 100%;
+}
+#topText {
+  width: 100%;
+}
+
+#bottomText {
+  width: 100%;
+}
+
+.checkbox-texto {
+  display: flex;
+}
+
+.panel-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.marginTop10 {
+  margin-top: 10px;
+}
+
+#panel-control {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.panel-control-column {
+  width: 48%;
+}
+
+.fontSize06 {
+  font-size: 1em;
+}
+
+.paddinginputcolor {
+  padding: 2px 1px;
+}
 /*----BOTONES----*/
 
 .button {
@@ -90,7 +222,13 @@ body {
   margin-top: 20px;
   padding: 10px;
   cursor: pointer;
+  color: var(--color);
 }
+
+#claroOscuro {
+  margin-left: 2px;
+}
+
 /*boton CRUZ*/
 
 .cerrar {
@@ -184,7 +322,7 @@ main {
   z-index: 1;
   width: 100%;
   height: 100%;
-  padding: 40px 10px 010px;
+  padding: 40px 8px 0 10px;
   background-color: var(--colorPanel);
 }
 
@@ -199,11 +337,27 @@ main {
   margin-top: 5px;
 }
 
+#selectTipografias {
+  width: 100%;
+}
+.paddingInputs {
+  padding: 10px 5px;
+}
+
 /*estilo barra*/
 input[type="range"] {
   margin-top: 5px;
   width: 100%;
-  background-color: rgb(229, 231, 241);
+  background-color: var(--colorHeader);
+  border-radius: 10px;
+  appearance: none;
+  height: 6px;
+}
+
+input:active[type="range"] {
+  margin-top: 5px;
+  width: 100%;
+  background-color: var(--color);
   border-radius: 10px;
   appearance: none;
   height: 6px;
@@ -216,7 +370,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 25px;
-  background: rgb(99, 97, 107);
+  background: var(--color);
   cursor: pointer;
 }
 
@@ -245,7 +399,7 @@ input[type="color"]::-webkit-color-swatch {
     top: 0;
     right: 0;
     position: fixed;
-    padding: 30px 40px;
+    padding: 30px 25px;
     overflow: auto;
     z-index: 10;
   }
@@ -259,7 +413,7 @@ input[type="color"]::-webkit-color-swatch {
     top: 0;
     right: 0;
     position: fixed;
-    padding: 30px 40px;
+    padding: 30px 25px;
     overflow: auto;
     z-index: 10;
   }

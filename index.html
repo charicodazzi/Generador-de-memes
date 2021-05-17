@@ -22,7 +22,7 @@
       <div class="row" >
         <button class="button" id="button-img"><i class="far fa-image"></i> Imagen</button>
         <button class="button" id="button-text"><i class="fas fa-font"></i>Texto</button>
-        <button class="button" id="claroOscuro"><i class="fas fa-lightbulb"></i>Modo Oscuro</button>
+        <button class="button" ><i class="fas fa-lightbulb"></i><span id="claroOscuro">Modo Oscuro</span></button>
       </div>
     </header>
 
@@ -41,18 +41,18 @@
         <button class="cerrar"id="button-close">
           <i class="fas fa-window-close" ></i></button>
         <section id="panel-image">
-          <h4>IMAGEN</h4>
-          <h3 class="margintop5">URL</h3>
-          <input type="text" id="input-url" class="width100">
+          <h4 class="panel-title">IMAGEN</h4>
+          <h3 class="margintop5 fontSize06">URL</h3>
+          <input type="text" id="input-url" class="width100 fondoInputs margintop5">
          <div>
-          <h3 class="margintop5">FONDO</h3>
+          <h3 class="margintop5 fontSize06">FONDO</h3>
           <div class="flex-row margintop5" id="contendorInputFondo">
             <div class="contenedorInput">
             <input type="color" value="#FFFFFF" id="colorFondoImagen">
               <span id="spanColorFondo"> #FFFFFF</span>
             </div>
           <div class="optionsFondo">
-            <select name="TipoDeFondo" id="TipoDeFondo" >
+            <select name="TipoDeFondo" id="tipoDeFondo" class="fondoInputs">
               <option value="unset">Ninguno</option>
               <option value="lighten">Aclarar</option>
               <option value="darken">Oscurecer</option>
@@ -65,8 +65,8 @@
          </div>
 
          <div class="margintop5">
-           <h3>FILTROS</h3>
-           <div class="margintop5"><label for="">BRILLO</label>
+           <h3 class="fontSize06 marginTop10">FILTROS</h3>
+           <div class="marginTop10"><label for="">BRILLO</label>
             <input type="range" id="brillo" value="0.5" min="0" max="1" step="0.1"></div>
            <div class="margintop5"><label for="">OPACIDAD</label>
             <input type="range" id="opacidad"value="0.5" min="0" max="1" step="0.1"></div>
@@ -85,28 +85,30 @@
            <div class="margintop5"><label for="">NEGATIVO</label>
             <input type="range"id="negativo" value="0"min="0" max="1" step="0.1"></div>
           </div>
-          <button id="resetButton">Restablecer filtros</button>
+          <button id="resetButton" class="fondoInputs fontSize06">Restablecer filtros</button>
 
         </section>
         <section id="panel-text" class="ocultar">
-          <h4>TEXTO</h4>
-          <div class="col">
-            <h3>SUPERIOR</h3>
-            <textarea name="superior" id="topText" cols="20" rows="2" placeholder="TOP TEXT"></textarea>
-            <input type="checkbox" id="checkboxarriba">
-            <label for="">Sin texto superior</label>
+          <h4 class="panel-title">TEXTO</h4>
+          <div class="col textarea">
+            <h3 class="marginTop10 fontSize06">SUPERIOR</h3>
+            <textarea name="superior" id="topText" cols="20" rows="2" placeholder="TOP TEXT" class="fondoInputs margintop5 paddingInputs"></textarea>
+            <div class="checkbox-texto margintop5">
+            <input type="checkbox" id="checkboxarriba" >
+            <label for="" class="fontSize06">Sin texto superior</label></div>
           </div>
 
-          <div class="col">
-            <h3>INFERIOR</h3>
-            <textarea name="interior" id="bottomText" cols="20" rows="2" placeholder="BOTTOM TEXT"></textarea>
+          <div class="col textarea marginTop10">
+            <h3 class="fontSize06">INFERIOR</h3>
+            <textarea name="interior" id="bottomText" cols="20" rows="2" placeholder="BOTTOM TEXT" class="fondoInputs margintop5 paddingInputs"></textarea>
+            <div class="checkbox-texto margintop5">
             <input type="checkbox" id="checkboxabajo">
-            <label for="checkboxabajo">Sin texto inferior</label>
+            <label for="checkboxabajo" class="fontSize06">Sin texto inferior</label></div>
           </div>
         
-          <div>
-            <h3>FUENTE</h3>
-            <select name="" id="selectTipografias">
+          <div class="marginTop10">
+            <h3 class="fontSize06">FUENTE</h3>
+            <select name="" id="selectTipografias" class="fondoInputs paddingInputs">
             <option value="Arial">Arial</option>
             <option value="Arial Black">Arial Black</option>
             <option value="American typewriter">American typewriter</option>
@@ -117,40 +119,40 @@
             <option value="Verdana">Verdana</option>
             <option value="Times New Roman">Times New Roman</option>
           </select>
-          <div class="flex-row">
-            <input type="number" min="12" value="40" max="50" id="fontSize">
-            <div class="buttons-container">
-              <button class="left"><i class="fas fa-align-left"></i></button>
-              <button class="center"><i class="fas fa-align-center"></i></button>
-              <button class="right"> <i class="fas fa-align-right"></i></button>
+          <div class="flex-row fontsize-alineacion marginTop10">
+            <input type="number" min="12" value="40" max="50" id="fontSize" class="fondoInputs paddingInputs">
+            <div class="buttons-container-alineacion">
+              <button class="left fondoInputs btn-alineacion-tamaño"><i class="fas fa-align-left"></i></button>
+              <button class="center fondoInputs btn-alineacion-tamaño"><i class="fas fa-align-center"></i></button>
+              <button class="right fondoInputs btn-alineacion-tamaño"> <i class="fas fa-align-right"></i></button>
             </div>
           </div>
-          <div class="panel-control">
-            <div class="flex-row">
+          
+            <div class="flex-row marginTop10" id="panel-control">
             <div class="panel-control-column">
-              <h3>COLOR</h3><input id="inputColor" type="color" value="#000000"><span id="colorLetraPanelTexto"> #000000</span>
+              <h3 class="fontSize06">COLOR</h3><div class="fondoInputs margintop5 paddinginputcolor"><input id="inputColor" type="color" value="#000000"><span id="colorLetraPanelTexto"> #000000</span></div>
             </div>
             <div class="panel-control-column">
-              <h3>FONDO</h3><input id="colorFondoTexto" type="color" value="#FFFFFF"><span id="colorFondoPanelTexto"> #FFFFFF</span>
+              <h3 class="fontSize06">FONDO</h3><div class="fondoInputs margintop5 paddinginputcolor"><input id="colorFondoTexto" type="color" value="#FFFFFF" ><span id="colorFondoPanelTexto" > #FFFFFF</span></div>
             </div>
           </div>
-            <input type="checkbox" id="fondoTransparente">
+            <input type="checkbox" id="fondoTransparente" class="marginTop10">
             <label for="fondoTransparente">Fondo transparente</label>
+        
+          <div class="panel-control marginTop10">
+            <h3 class="fontSize06">CONTORNO</h3>
+            <div class="buttons-container margintop5">
+            <button id="sinContorno"  class="fondoInputs estiloInputs contornoBoton">Ninguno</button>
+            <button id="contornoClaro" class="fondoInputs estiloInputs contornoBoton">Claro</button>
+            <button id="contornoOscuro" class="fondoInputs estiloInputs contornoBoton">Oscuro</button>
           </div>
-          <div class="panel-control">
-            <h3>CONTORNO</h3>
-            <div class="buttons-container">
-            <button id="sinContorno">Ninguno</button>
-            <button id="contornoClaro">Claro</button>
-            <button id="contornoOscuro">Oscuro</button>
+          <div class="marginTop10">
+            <h3 class="fontSize06">Espaciado</h3>
+            <input type="number" min=0 max=80 id="espaciado" class="fondoInputs estiloInputs margintop5 paddingInputs" placeholder=1>
           </div>
           <div>
-            <h3>Espaciado</h3>
-            <input type="number" min=0 max=80 id="espaciado">
-          </div>
-          <div>
-            <h3>Interlineado</h3>
-           <select name="interlineado" id="interlineado">
+            <h3 class="marginTop10 fontSize06 margintop5">Interlineado</h3>
+           <select name="interlineado" id="interlineado" class="fondoInputs estiloInputs paddingInputs margintop5">
           <option value="0.8">0.8</option>
            <option value="1">1</option>
            <option value="1.2">1.2</option>
